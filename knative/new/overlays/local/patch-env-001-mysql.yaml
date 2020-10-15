@@ -8,7 +8,7 @@ actions:
   path: /spec/template/spec/containers/0/env
   value:
     - name: SPRING_PROFILES_ACTIVE
-      value: local
+      value: mysql
     - name: MYSQL_PASSWORD
       valueFrom:
         secretKeyRef:

@@ -1,4 +1,6 @@
 ---
+conditional:
+  onDependency: kafka-clients
 actions:
   to: kubernetes/overlays/local/patch-env.yaml
 ---
@@ -6,4 +8,4 @@ actions:
   path: /spec/template/spec/containers/0/env
   value:
     - name: SPRING_PROFILES_ACTIVE
-      value: local
+      value: kafka
