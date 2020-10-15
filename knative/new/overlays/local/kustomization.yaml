@@ -1,0 +1,17 @@
+---
+actions:
+  to: kubernetes/overlays/local/kustomization.yaml
+---
+images:
+  - name: dev.local/function  #used for Kustomize matching
+    newName: dev.local/{{artifactId}}
+    newTag: 0.0.1-SNAPSHOT
+resources:
+  - ../base
+patchesJson6902:
+  - target:
+      group: serving.knative.dev
+      version: v1
+      kind: Service
+      name: function
+    path: patch-env.yaml

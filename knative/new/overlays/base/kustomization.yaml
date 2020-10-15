@@ -1,0 +1,7 @@
+---
+actions:
+  to: kubernetes/overlays/base/kustomization.yaml
+---
+namePrefix: {{artifactId}}-
+resources:
+  - github.com/kustomizations/spring-boot-knative?ref=v0.1.1
