@@ -1,6 +1,6 @@
 ---
 conditional:
-  onDependency: kafka-clients
+  onDependency: spring-kafka
 actions:
   to: kubernetes/overlays/local/patch-env.yaml
 ---
