@@ -2,15 +2,13 @@
 conditional:
   onDependency: mysql-connector-java
 actions:
-  to: kubernetes/overlays/local/patch-env.yaml
+  inject:
+    after: 'value: local'
+    to: kubernetes/overlays/local/patch-env.yaml
+    skip: 'mysql-password'
 ---
-- op: add
-  path: /spec/template/spec/containers/0/env
-  value:
-    - name: SPRING_PROFILES_ACTIVE
-      value: local
     - name: MYSQL_PASSWORD
       valueFrom:
         secretKeyRef:
           name: mysql
-          key: mysql-password  
+          key: mysql-password
