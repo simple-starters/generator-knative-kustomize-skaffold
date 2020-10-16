@@ -8,4 +8,4 @@ actions:
   path: /spec/template/spec/containers/0/env
   value:
     - name: SPRING_PROFILES_ACTIVE
-      value: kafka
+      value: local
