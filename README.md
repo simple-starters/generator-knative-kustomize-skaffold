@@ -47,8 +47,14 @@ skaffold run -p local-kafka-helm
 
 ## Run the application
 
-To start the application run:
+To start the application on a local cluster run:
 
 ```bash
-skaffold run -p local
+skaffold run -p local --default-repo dev.local
+```
+
+To start the application on a remote cluster run where $DOCKER_ID is your Docker Hub ID:
+
+```bash
+skaffold run -p local --default-repo $DOCKER_ID
 ```
