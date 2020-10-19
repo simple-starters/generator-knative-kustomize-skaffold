@@ -4,6 +4,8 @@ This generator provides skaffold and kustomize configurations to deploy a Spring
 
 It also provides Kubernetes resources for deploying MySQL or Kafka, should the application need it.
 
+Container builds are performed using the [jib maven plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) with [skaffold](https://skaffold.dev/docs/pipeline-stages/builders/jib/).
+
 ## Prerequisites
 
 - [Kustomize](https://kustomize.io/) customizes Kubernetes configuration across different environments (dev, qa, prod) and provide a re-usable library of centralized configuration.
