@@ -1,6 +1,16 @@
 # generator-knative-kustomize-skaffold
 
-Generator for Knative Resources based on Kustomize and Skaffold
+This generator provides skaffold and kustomize configurations to deploy a Spring Boot application on a Kubernetes cluster with Knative.
+
+It also provides Kubernetes resources for deploying MySQL or Kafka, should the application need it.
+
+Container builds are performed using the [jib maven plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) with [skaffold](https://skaffold.dev/docs/pipeline-stages/builders/jib/).
+
+## Prerequisites
+
+- [Kustomize](https://kustomize.io/) customizes Kubernetes configuration across different environments (dev, qa, prod) and provide a re-usable library of centralized configuration.
+- [Skaffold](https://skaffold.dev/) provides a Kubernetes centric workflow for building, pushing, and deploying your application and it's dependent services and applications.
+- [Knative](https://knative.dev/docs/serving/) provides Kubernetes CRDs and controllers, for deployment of serverless containers with autoscaling and scale-to-zero.
 
 ## Local Services
 
