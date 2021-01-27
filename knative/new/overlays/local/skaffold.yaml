@@ -48,7 +48,7 @@ profiles:
             bitnami/mysql
           remote: true
           setValues:
-            db.user: springuser
+            auth.username: springuser
   - name: local-kafka-helm
     deploy:
       helm:
